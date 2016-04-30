@@ -3,15 +3,25 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchPost} from '../actions/action_creators';
 class Test extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
+  //   this.renderData = this.renderData.bind(this);
+  // }
+
+  // does not need to have constructor above
+  // it errors out earlier bc we didn't bind context in this.renderData
+  // componentWillMount is like initialize in backbone
+  componentWillMount() {
+    console.log('hello');
     this.renderData = this.renderData.bind(this);
   }
 
 
   renderData() {
     // console.log(this.props.offer);
+    console.log('-')
+    console.log(this);
     this.props.fetchPost();
   }
 
