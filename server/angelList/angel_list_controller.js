@@ -1,15 +1,15 @@
-const getAngelListData = require('./angel_list');
+const angelListFile = require('./angelList.json');
 const _ = require('underscore');
 
-const filterAngelListData = title => {
-  getAngelListData(data => {
-    const filteredData = _.filter(JSON.parse(data).jobs, (job) => {
+module.exports = {
+  filterAngelListData: (title, callback) => {
+    // filter data in data file by job title and return to GET request as response
+    const filteredData = _.filter(angelListFile.jobs, (job) => {
       return job.title === title;
     });
 
-    console.log(filteredData);
-    return filteredData;
-  });
+    callback(null, filteredData);
+  },
 };
 
-filterAngelListData('UI Engineer');
+// filterAngelListData('UI Engineer');
