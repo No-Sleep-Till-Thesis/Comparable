@@ -39,11 +39,14 @@ const createDataFile = data => {
   });
 };
 
-const retrieveDataFile = () => {
+const retrieveDataFile = (callback) => {
   fs.readFile('angelList.json', 'utf-8', (err, data) => {
-    if (err) throw err;
-    console.log(data);
-    return data;
+    if (err) {
+      throw err;
+    } else {
+      // console.log(data);
+      return callback(data);
+    }
   });
 };
 
