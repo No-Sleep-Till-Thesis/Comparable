@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from './containers/AppContainer';
-import PostIndex from './components/posts_index';
 import Offer from './containers/OfferContainer';
 
 function requireAuth(nextState, replace) {
@@ -20,7 +19,6 @@ function requireAuth(nextState, replace) {
 
 export default (
   <Route path="/" component={App}>
-    <Route path="/test" component={PostIndex} onEnter={requireAuth} />
     <Route path="/offers" component={Offer} onEnter={requireAuth} />
   </Route>
 );

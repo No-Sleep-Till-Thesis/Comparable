@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import {reduxForm} from 'redux-form';
 
+// Prevents form from being submitted without title
+// The getJobs API call requires the title
 const validate = values => {
   const errors = {};
 
-  // Email
   if (!values.title) {
     errors.title = 'Required';
   }
@@ -14,7 +15,6 @@ const validate = values => {
 
 class OfferForm extends Component {
   render() {
-    // console.log('inside', this.props);
     const { fields: { title, location, salary, equity }, resetForm, handleSubmit } = this.props;
 
     return (
@@ -23,20 +23,20 @@ class OfferForm extends Component {
           <form onSubmit={handleSubmit} className="form-inline">
             <div className="form-group">
               <label className="sr-only" htmlFor="title">Title</label>
-              <input type="text" className="form-control" id="title" placeholder="Title" {...title} />
+              <input type="text" className="form-control" placeholder="Title" { ...title } />
               {title.touched && title.error && <div>{title.error}</div>}
             </div>
             <div className="form-group">
               <label className="sr-only" htmlFor="location">Location</label>
-              <input type="text" className="form-control" id="location" placeholder="Location" {...location } />
+              <input type="text" className="form-control" placeholder="Location" { ...location } />
             </div>
             <div className="form-group">
               <label className="sr-only" htmlFor="salary">Salary</label>
-              <input type="number" className="form-control" id="salary" placeholder="Salary" {...salary } />
+              <input type="number" className="form-control" placeholder="Salary" { ...salary } />
             </div>
             <div className="form-group">
               <label className="sr-only" htmlFor="equity">Equity</label>
-              <input type="number" className="form-control" id="equity" placeholder="Equity" {...equity } />
+              <input type="number" className="form-control" placeholder="Equity" { ...equity } />
             </div>
             <button className="btn btn-success" type="submit">Submit</button>
           </form>
@@ -46,8 +46,6 @@ class OfferForm extends Component {
   }
 };
 
-// onClick={handleSubmit(data => { console.log(data);})}
-
 OfferForm = reduxForm({
   form: 'offer',
   fields: ['title', 'location', 'salary', 'equity'],
@@ -55,7 +53,3 @@ OfferForm = reduxForm({
 })(OfferForm);
 
 export default OfferForm;
-
-// OfferForm.propTypes = {
-//   getRelevantOffers: PropTypes.func.isRequired,
-// };
