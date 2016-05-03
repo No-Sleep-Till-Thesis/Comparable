@@ -6,7 +6,7 @@ import DummyData from './dummy_data';
 const rootReducer = combineReducers({
   offers: Offers,
   auth: Auth,
-  DummyData: DummyData
+  data: DummyData
 });
 
 export default rootReducer;

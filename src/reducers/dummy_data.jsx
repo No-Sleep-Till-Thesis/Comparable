@@ -9,9 +9,12 @@ const randomDataSet = () => {
 var array = Jobs().map(job => {
   return [(job.salary_min + job.salary_max)/2, (Number(job.equity_min) + Number(job.equity_max)) / 2];
 });
-// console.log(array[0]);
+console.log(array[0]);
 // export const randomizeData = () => {
 //   return { data: array };
 // };
 
-export default { data: array };
+
+export default function() {
+  return array;
+}
