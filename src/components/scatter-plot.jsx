@@ -20,15 +20,11 @@ const yScale = (props) => {
 };
 const marshalProps = (props) => {
   const scales = { xScale: xScale(props), yScale: yScale(props) };
-  // console.log('props', props)
-  // console.log(scales.xScale);
-  console.log(scales);
+
   return Object.assign({}, props, scales);
 };
 
 export default (props) => {
-  console.log('inside scatter');
-  console.log(props);
   const d3Props = marshalProps(props);
   return <svg width={d3Props.width} height={d3Props.height}>
     <DataCircles {...d3Props} update={props.update}/>

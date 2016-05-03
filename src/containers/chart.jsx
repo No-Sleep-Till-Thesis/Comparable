@@ -1,7 +1,7 @@
 import React                from 'react';
 import {connect}            from 'react-redux';
 // import * as actionCreators  from '../actions/action_creators';
-import ScatterPlot          from './scatter-plot';
+import ScatterPlot          from '../components/scatter-plot';
 
 const styles = {
   width   : 1500,
@@ -13,8 +13,7 @@ const Chart = (props) => {
   const updateCircle = (circle) => {
     circle.fill = 'black';
   };
-  console.log('---');
-  console.log('props ', props);
+
   return <div>
     <h1>Playing With React and D3</h1>
     <ScatterPlot {...props} {...styles} update={updateCircle}/>
@@ -24,4 +23,12 @@ const Chart = (props) => {
   </div>;
 };
 
-export default connect((state) => state)(Chart);
+function mapStateToProps(state) {
+  const { data } = state;
+
+  return {
+    data
+  };
+};
+
+export default connect(mapStateToProps)(Chart);
