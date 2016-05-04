@@ -8,7 +8,7 @@ const getRelevantOffers = {
     },
   })
     .then(response => {
-      console.log(response);
+      console.log(response.data);
     })
     .catch(response => {
       console.log(response);
