@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class OfferDisplay extends Component {
   render() {
     const { offer } = this.props.data;
-    console.log(offer);
+
     return (
       <div className="row">
         <div className="col-md-10 col-md-offset-1">

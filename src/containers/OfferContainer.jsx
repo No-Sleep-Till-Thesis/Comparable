@@ -31,7 +31,7 @@ class Offer extends Component {
   handleSubmit(data, dispatch) {
     // Retrieves jobs data from server
     // via angelListApi.js
-    // console.log(data.title);
+    dispatch(changeOffer(data));
     this.props.sendJob(data.title);
     // console.log(data);
 
@@ -40,11 +40,12 @@ class Offer extends Component {
   };
 
   render() {
-    // const { dispatch, data } = this.props;
+    const { offer } = this.props;
     
     return (
       <div className="container">
         <OfferForm onSubmit={this.handleSubmit.bind(this)}></OfferForm>
+        <OfferDisplay data={offer}></OfferDisplay>
         <ScatterPlot {...this.props} {...styles} update={updateCircle}/>
           <h3 id="equity">Equity</h3>
           <h3 id="salary">Salary</h3>
