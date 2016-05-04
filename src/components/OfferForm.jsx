@@ -18,9 +18,9 @@ class OfferForm extends Component {
     const { fields: { title, location, salary, equity }, resetForm, handleSubmit } = this.props;
 
     return (
-      <div className="row">
+      <div className="row offer-form">
         <div className="col-md-10 col-md-offset-1">
-          <form onSubmit={handleSubmit} className="form-inline">
+          <form onSubmit={handleSubmit} className="form-inline offer-input">
             <div className="form-group">
               <label className="sr-only" htmlFor="title">Title</label>
               <input type="text" className="form-control" placeholder="Title" { ...title } />
@@ -38,7 +38,9 @@ class OfferForm extends Component {
               <label className="sr-only" htmlFor="equity">Equity</label>
               <input type="number" className="form-control" placeholder="Equity" { ...equity } />
             </div>
-            <button className="btn btn-success" type="submit">Submit</button>
+            <div className="form-group">
+              <button className="btn btn-success" type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
