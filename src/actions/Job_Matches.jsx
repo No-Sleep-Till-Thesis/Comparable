@@ -2,12 +2,13 @@ import axios from 'axios';
 export const JOB_MATCH = "JOB_MATCH";
 
 export function sendJob(title) {
-  const request = axios.get('/api/jobs', {
+  
+  var request = axios.get('/api/jobs', {
     params: {
       title: title
     }
   });
-  console.log('inside jobMatch');
+  console.log('inside action');
   console.log(request);
   return {
     type: JOB_MATCH,

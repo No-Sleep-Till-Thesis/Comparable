@@ -9,7 +9,7 @@ const renderCircles = (props) => {
   return (coords, index) => {
     // console.log('inside rendercircle');
     // console.log(props);
-    // console.log(coords[0]);
+    // console.log(props.xScale(coords.mean[0]));
     // coords = []
     // coords.mean = []
     var Xcoord = coords.mean[0];
@@ -21,7 +21,7 @@ const renderCircles = (props) => {
       cy: props.yScale(coords.mean[1]),
       r: 5,
       key: index,
-      fill: `rgb(${rand()}, ${rand()}, ${rand()})`,
+      fill: `rgb(47, 147, ${Math.floor((props.xScale(coords.mean[0])/2000) * 255)})`,
       stroke: 'black'
     };
     // console.log(circleProps);
