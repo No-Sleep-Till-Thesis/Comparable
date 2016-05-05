@@ -26,24 +26,24 @@ class OfferForm extends Component {
             </div>
             <div className="panel-body">
               <form onSubmit={handleSubmit} className="form-inline offer-input">
-                <div className="form-group">
+                <div className="form-group has-warning">
                   <label className="sr-only" htmlFor="title">Title</label>
                   <input type="text" className="form-control" placeholder="Title" autoComplete="off" { ...title } />
                   {title.touched && title.error && <div>{title.error}</div>}
                 </div>
-                <div className="form-group">
+                <div className="form-group has-warning">
                   <label className="sr-only" htmlFor="location">Location</label>
                   <input type="text" className="form-control" placeholder="Location" autoComplete="off" { ...location } />
                 </div>
-                <div className="form-group">
+                <div className="form-group has-warning">
                   <label className="sr-only" htmlFor="salary">Salary</label>
                   <input type="number" className="form-control" placeholder="Salary" autoComplete="off" { ...salary } />
                 </div>
-                <div className="form-group">
+                <div className="form-group has-warning">
                   <label className="sr-only" htmlFor="equity">Equity</label>
                   <input type="number" step="0.01" className="form-control" placeholder="Equity" autoComplete="off" { ...equity } />
                 </div>
-                <div className="form-group">
+                <div className="form-group has-warning">
                   <button className="btn btn-success" type="submit">Submit</button>
                 </div>
               </form>
