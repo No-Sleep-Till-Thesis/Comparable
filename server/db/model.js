@@ -3,12 +3,13 @@ var r = thinky.r;
 var type = thinky.type;
 
 var User = thinky.createModel('User', {
-  id: type.string();
-  email: type.string()
+  email: type.string();
+  authID: type.string();
 });
 
 var Offer = thinky.createModel('Offer', {
   id: type.string();
+  userId: 'refenceAuthID',
   title: type.string();
   location: type.string();
   salary: type.string();
@@ -16,4 +17,10 @@ var Offer = thinky.createModel('Offer', {
   createdAt: type.date().default(r.now())
 });
 
-User.hasMany(Offer, 'offers', 'id', 'userId');
+User.hasMany(Offer, 'offers', 'authOId', 'userId');
+
+
+
+// auth id, email - get both from authO
+
+// offer has its own id and and a key called userId -  userId reference authID
