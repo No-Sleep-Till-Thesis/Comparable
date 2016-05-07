@@ -20,7 +20,9 @@ var Offer = thinky.createModel('Offer', {
 User.hasMany(Offer, 'offers', 'authOId', 'userId');
 
 
-
 // auth id, email - get both from authO
 
 // offer has its own id and and a key called userId -  userId reference authID
+
+exports.user = thinky.createModel('User', User);
+exports.offer = thinky.createModel('Offer', Offer);
