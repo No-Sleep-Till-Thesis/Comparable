@@ -1,8 +1,9 @@
-var thinky = require('thinky')({
-  host: process.env.RDB_HOST|| 'localhost',
-  port: process.env.RDB_PORT || 28015,
-  db: process.env.RDB_DB || 'comparable',
-  authKey: ''
-});
+import thinky from 'thinky';
 
-module.exports = thinky;
+export default thinky({
+  host: process.env.DBHOST || 'localhost',
+  port: 28015,          
+  db: 'comparable',  
+  authKey: '',
+  expressPort: process.env.PORT || 3000,
+});
