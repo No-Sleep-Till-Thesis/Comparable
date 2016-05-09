@@ -1,12 +1,15 @@
 var Offer = require('../models/Offer');
 
-const controller = {
+module.exports = {
   getAllOffers: function(req, res) {
-    console.log('getting all offers here');
-    res.status(201).send('in offercontroller 333');
+
+    Offer.run()
+    .then((result) => {
+      console.log(result);
+      res.status(200).send(result);
+    });
   },
   createOffer: function(req, res) {
-    console.log('in createOffer');
 
     const offer = new Offer(req.body);
     offer.save()
@@ -19,4 +22,3 @@ const controller = {
   }
 }
 
-module.exports = controller;
