@@ -1,5 +1,5 @@
-import thinky from '../thinky';
-import User from '../User';
+var thinky = require('../thinky');
+var User = require('./User');
 
 const r = thinky.r;
 const type = thinky.type;
@@ -11,9 +11,9 @@ const Offer = thinky.createModel('Offer', {
   salary: type.number(),
   equity: type.string(),
   userId: type.string(),
-  createdAt: type.date.default(r.now()),
+  
 });
 
-export default Offer;
+module.exports = Offer;
 
-Offer.belongsTo(User, 'user', 'userId', 'id');
+// Offer.belongsTo(User, 'user', 'userId', 'id');

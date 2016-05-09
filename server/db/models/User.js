@@ -1,5 +1,6 @@
-import thinky from '../thinky';
-import Offer from '../Offer';
+var thinky = require('../thinky');
+var Offer = require('./Offer');
+
 const r = thinky.r;
 const type = thinky.type;
 
@@ -10,8 +11,8 @@ const User = thinky.createModel('User', {
   createdAt: type.date().default(r.now()),
 });
 
-User.hasMany(Offer, 'offer', 'id', 'userId');
+// User.hasMany(Offer, 'offer', 'id', 'userId');
 
-export default User;
+module.exports = User;
 
 
