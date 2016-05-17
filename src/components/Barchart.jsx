@@ -130,5 +130,3 @@ export default class BarGraph extends Component {
     };
   }
 }
-
-// <img className="loader-img" src="https://d13yacurqjgara.cloudfront.net/users/69182/screenshots/2179253/animated_loading__by__amiri.gif" alt="Loading..." />
