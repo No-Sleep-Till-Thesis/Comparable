@@ -66,7 +66,7 @@ export default class OfferDisplay extends Component {
             <ul className="displayList">
               <li className="text-center offerTitle">{userOffer.title}</li>
               <li className="text-center">
-                Location: {userOffer.location} | Salary: {userOffer.salary} | Equity: {userOffer.equity}
+                Location: {userOffer.location} | Salary: ${userOffer.salary} | Equity: {userOffer.equity}
               </li>
             </ul>
           }
