@@ -212,8 +212,12 @@ footer a, i {
   margin: 0px 3px;
 }
 
+.offer-input .form-group select {
+  min-width: 160px;
+}
+
 select.form-control:not([size]):not([multiple]) {
-  height: 2rem;
+  height: 2.1rem;
 }
 
 .offer-form {
@@ -227,6 +231,23 @@ select.form-control:not([size]):not([multiple]) {
 .offer-form .panel-heading {
   background-color: #2092e1;
   color: #f8f8f8;
+}
+
+.offer-form .btn.btn-success {
+  margin-bottom: 0;
+}
+
+input[type='number']::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.54);
+}
+input[type='number']:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: rgba(0, 0, 0, 0.54);
+}
+input[type='number']::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.54);
+}
+input[type='number']:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .btn.btn-success {
@@ -252,6 +273,12 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .toggle-btn > .btn:focus {
+  border: 1px solid #ff8a37;
+  background: #ff8a37;
+  color: #fff;
+}
+
+.toggle-btn > .btn:hover {
   border: 1px solid #ff8a37;
   background: #ff8a37;
   color: #fff;
@@ -545,4 +572,12 @@ select.form-control:not([size]):not([multiple]) {
   font-size: 2em;
   font-weight: bold;
   color: #2092e1;
+  margin-left: 20px;
+}
+.circle-inner {
+  font-size: 22px;
+}
+
+.circle-inner i {
+  color: #FFFFFF;
 }
