@@ -9,6 +9,10 @@ describe('Job Display actions', () => {
     it('should return an object with the proper type', () => {
       expect(displayJob().type).to.equal('JOB_DISPLAY');
     });
+    it('should return an object with a payload', () => {
+      var job = {title: 'software engineer'};
+      expect(displayJob(job).payload).to.equal(job);
+    })
   });
 });
 
