@@ -201,7 +201,8 @@ footer a, i {
 }
 
 .displayList {
-  list-style: none
+  list-style: none;
+  padding-left: 0;
 }
 
 .offerTitle {
@@ -286,30 +287,29 @@ input[type='number']:-ms-input-placeholder { /* Internet Explorer 10-11 */
 
 // Badge Circles
 .responsive-circle {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 20px 20px;
-    width: 115%;
+  font-weight: 700;
+  margin-bottom: 20px;
+  width: 115%;
 }
 
 .responsive-circle::after {
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: 0;
-    margin-bottom: 20px;
-    padding-bottom: 100%;
-    width: 100%;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 0;
+  margin-bottom: 20px;
+  padding-bottom: 100%;
+  width: 100%;
 }
 
 .responsive-circle div {
-    color: white;
-    float: left;
-    line-height: 1em;
-    margin-top: -0.5em;
-    padding-top: 40%;
-    text-align: center;
-    width: 100%;
+  color: white;
+  float: left;
+  line-height: 1em;
+  margin-top: -0.5em;
+  padding-top: 40%;
+  text-align: center;
+  width: 100%;
 }
 
 .red-circle::after {
