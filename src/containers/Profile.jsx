@@ -43,7 +43,7 @@ class Profile extends Component {
         <div className="row">
           {profileData && profileData.length > 0 &&
             <div>
-              <h1 className="offersHeading">My Offers</h1>
+              <h1 className="offersHeading heading-left">My Offers</h1>
               <OfferSlider
                 profileData={profileData}
                 sendJob={this.props.sendJob}
