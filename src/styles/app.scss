@@ -80,6 +80,10 @@ p {
   transform: scale(1.1);
 }
 
+.mid-section-3 img:hover {
+  transform: none;
+}
+
 .lower-section {
   text-align: center;
 }
@@ -87,9 +91,25 @@ p {
 .vertical-center {
   min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 50vh; /* These two lines are counted as one :-)       */
-
   display: flex;
   align-items: center;
+}
+
+.logo-center {
+  min-height: 36%;
+  min-height: 36vh;
+}
+
+.logo-center img {
+  margin: 0 auto;
+}
+
+.headshot {
+  max-width: 35%;
+  margin: 10px auto;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
 }
 
 // <----- START: Navbar styles ----->
