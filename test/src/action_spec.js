@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { displayJob } from '../../src/actions/Job_Display.jsx';
 import { changeOffer, toggleChart } from '../../src/actions/Offer_Actions.jsx';
 import { sendJob, getUserOffers } from '../../src/actions/Job_Matches.jsx';
-
+import { SKILLS_ACTION, getSkills } from '../../src/actions/Skills_Actions.jsx';
 
 describe('Job Display actions', () => {
   describe('displayJob', () => {
@@ -42,4 +42,13 @@ describe('Job Matches', () => {
         expect(getUserOffers({title: 'test', location: 'test'}).type).to.equal('GET_USERS');
       });
     });
+});
+
+describe('Skills actions', () => {
+  describe('getSkills', () => {
+    it('should return an object with the proper type', () => {
+      var data = {title: 'Frontend Engineer'};
+      expect(getSkills(data).type).to.equal(SKILLS_ACTION);
+    });
+  });
 });
