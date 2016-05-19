@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import skillReducer from '../../src/reducers/Skills_Reducers.jsx';
 import { SKILLS_ACTION } from '../../src/actions/Skills_Actions.jsx';
+import getOffer from '../../src/actions/Skills_Actions.jsx';
 
 describe('Skill Reducer', () => {
   it('handles action with unknown type', () => {
