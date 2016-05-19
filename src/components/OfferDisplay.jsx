@@ -10,6 +10,7 @@ export default class OfferDisplay extends Component {
     let salarySum = 0;
     let equitySum = 0;
     let count = 0;
+    let multiplier = 1;
 
     jobs.forEach((job) => {
       if (!job.salary) {
@@ -17,6 +18,7 @@ export default class OfferDisplay extends Component {
           // not all jobs have these things, so to give an accurate Avg
           // we must mee track of count
 
+          multiplier = 2;
           count++;
           salarySum += Math.round((job.salary_min + job.salary_max));
           equitySum += Math.round((Number(job.equity_min) + Number(job.equity_max)));
@@ -33,9 +35,10 @@ export default class OfferDisplay extends Component {
       }
     });
 
+
     // Calculate averages
-    let salaryAvg = Math.round(salarySum / (count * 2));
-    let equityAvg = Math.round(equitySum / (count * 2));
+    let salaryAvg = Math.round(salarySum / (count * multiplier));
+    let equityAvg = Math.round(equitySum / (count * multiplier));
     let salaryDiff = Math.round(((userOffer.salary - salaryAvg) / salaryAvg) * 100);
     let equityDiff = Math.round(((userOffer.equity - equityAvg) / equityAvg) * 100);
     let totalDiff = salaryDiff + equityDiff;
