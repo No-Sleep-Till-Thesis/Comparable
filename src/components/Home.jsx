@@ -50,22 +50,22 @@ class Home extends Component {
           <div className="col-md-12">
             <div className="row vertical-center logo-center">
               <div className="col-lg-2 col-md-2 col-sm-2">
-                <img className="img-responsive" src="https://camo.githubusercontent.com/722a5cc12c7d40231ebeb8ca6facdc8547e2abf7/68747470733a2f2f64336a732e6f72672f6c6f676f2e737667" alt="D3" />
+                <img className="img-responsive" src="https://s3.amazonaws.com/comparable/d3%3Dlogo.svg" alt="D3" />
               </div>
               <div className="col-lg-2 col-md-2 col-sm-2">
-                <img className="img-responsive" src="http://www.learningxpert.com/sites/default/files/styles/large/public/expressjs_logo.png?itok=JC-5xZoe" alt="Express" />
+                <img className="img-responsive" src="https://s3.amazonaws.com/comparable/expressjs_logo.png" alt="Express" />
               </div>
               <div className="col-lg-2 col-md-2 col-sm-2">
-                <img className="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/527px-MongoDB-Logo.svg.png" alt="MongoDB" />
+                <img className="img-responsive" src="https://s3.amazonaws.com/comparable/MongoDB-Logo.svg.png" alt="MongoDB" />
               </div>
               <div className="col-lg-2 col-md-2 col-sm-2">
-                <img className="img-responsive" src="https://pixabay.com/static/uploads/photo/2015/04/23/17/41/node-js-736399_960_720.png" alt="Node" />
+                <img className="img-responsive" src="https://s3.amazonaws.com/comparable/node-js-736399_960_720.png" alt="Node" />
               </div>
               <div className="col-lg-2 col-md-2 col-sm-2">
-                <img className="img-responsive" src="http://yycjs.com/real-world-react/img/react-logo.png" alt="React" />
+                <img className="img-responsive" src="https://s3.amazonaws.com/comparable/react-logo.png" alt="React" />
               </div>
               <div className="col-lg-2 col-md-2 col-sm-2">
-                <img className="img-responsive" src="https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67" alt="Redux" />
+                <img className="img-responsive" src="https://s3.amazonaws.com/comparable/redux-logo.png" alt="Redux" />
               </div>
             </div>
           </div>
@@ -79,13 +79,13 @@ class Home extends Component {
             </div>
             <div className="row vertical-center logo-center">
               <div className="col-lg-4">
-                <img className="headshot img-responsive img-thumbnail" src="https://avatars0.githubusercontent.com/u/16548102?v=3&s=460" alt="Justin Nguyen" />
+                <img className="headshot img-responsive img-thumbnail" src="https://s3.amazonaws.com/comparable/Justin-headshot.jpeg" alt="Justin Nguyen" />
               </div>
               <div className="col-lg-4">
-                <img className="headshot img-responsive img-thumbnail" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/03d/316/0540c0c.jpg" alt="Ryan Haase" />
+                <img className="headshot img-responsive img-thumbnail" src="https://s3.amazonaws.com/comparable/RDH-Headshot.jpeg" alt="Ryan Haase" />
               </div>
               <div className="col-lg-4">
-                <img className="headshot img-responsive img-thumbnail" src="https://avatars0.githubusercontent.com/u/9014795?v=3&s=460" alt="Trevor Pace" />
+                <img className="headshot img-responsive img-thumbnail" src="https://s3.amazonaws.com/comparable/Trevor-headshot.jpeg" alt="Trevor Pace" />
               </div>
             </div>
           </div>
